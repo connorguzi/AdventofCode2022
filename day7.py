@@ -38,17 +38,6 @@ class Directory:
         NewFile = File(size=size, name=name)
         self.files.append(NewFile)
 
-    # def CalcSize(self):
-    #     global totalscore
-    #     for file in self.files:
-    #         self.size += file.size
-    #     if self.children:
-    #         for child in self.children:
-    #             self.size += child.CalcSize()
-    #     if self.size <= 100000:
-    #         totalscore += self.size
-    #     return self.size
-
     ## ONLY USE ONCE ##
     def CalcSize(self):
         global totalscore
@@ -111,9 +100,6 @@ f = open('day7.txt', 'r')
 for x in f:
     words = x.split()
 
-    # print(current.children)
-    # for child in current.children:
-    #     print(child.name)
     if(words[1] == 'cd'):
         if(words[2] == '..'):
             current = current.parent
@@ -184,5 +170,5 @@ print('Part2: ' + str(root.FindClosest(root.size).size))
 # current.AddFile(300, 'nad')
 
 
-# print(root.CalcSize())
-# # print(root)
+# # print(root.CalcSize())
+# print(root)
